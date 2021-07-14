@@ -42,7 +42,7 @@ function understrap_add_site_child_info() {
     $the_theme = wp_get_theme();
 
     $site_info = sprintf(
-        '<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s(%4$s)',
+        '<a href="%1$s">%2$s</a><span class="sep"> | </span>%3$s %4$s',
         esc_url( __( 'https://wordpress.org/', 'magelang' ) ),
         sprintf(
             /* translators: WordPress */
@@ -53,11 +53,11 @@ function understrap_add_site_child_info() {
             /* translators: 1: Theme name, 2: Theme author */
             esc_html__( 'Theme: %1$s by %2$s.', 'magelang' ),
             $the_theme->get( 'Name' ),
-            '<a href="' . esc_url( __( 'https://arifsetiawan.com', 'understrap' ) ) . '">arifsetiawan.com</a>'
+            '<a href="' . esc_url( __( 'https://arifsetiawan.com', 'understrap' ) ) . '">ariffsetiawan</a>'
         ),
         sprintf( // WPCS: XSS ok.
             /* translators: Theme version */
-            esc_html__( 'Version: %1$s', 'magelang' ),
+            esc_html__( 'v%1$s', 'magelang' ),
             $the_theme->get( 'Version' )
         )
     );

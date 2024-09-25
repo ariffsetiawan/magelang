@@ -1,10 +1,22 @@
 {
-    "name": "holger1411/understrap-child",
-    "description": "Basic Child Theme for UnderStrap Theme Framework",
-    "type": "library",
-    "license": "GPL-2.0",
-    "minimum-stability": "stable",
-    "require": {},
-    "keywords": ["wordpress","theme","bootstrap"],
-    "homepage": "https://github.com/holger1411/understrap-child"
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"sirbrillig/phpcs-changed": "^2.11",
+		"sirbrillig/phpcs-variable-analysis": "^2.11",
+		"wp-cli/i18n-command": "^2.6",
+		"wp-coding-standards/wpcs": "^3.1"
+	},
+	"scripts": {
+		"php:lint": "vendor/bin/phpcs -p -s",
+		"php:lint:errors": "vendor/bin/phpcs -p -s --runtime-set ignore_warnings_on_exit 1",
+		"php:lint:autofix": "vendor/bin/phpcbf",
+		"php:lint:changed": "vendor/bin/phpcs-changed --git --git-unstaged",
+		"make-pot": "wp i18n make-pot . theme/languages/magelang.pot"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }

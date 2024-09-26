@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-	<section id="primary">
-		<main id="main" class="bg-primary">
+	<section id="primary" class="md:w-2/3 md:mr-32">
+		<main id="main">
 
 		<?php
 		if ( have_posts() ) {

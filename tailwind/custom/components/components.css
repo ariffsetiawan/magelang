@@ -54,3 +54,7 @@
 .entry-content > .alignright {
 	@apply float-right ml-8;
 }
+
+#primary-menu {
+	@apply flex gap-4;
+}

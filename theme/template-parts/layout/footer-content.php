@@ -9,13 +9,13 @@
 
 ?>
 
-<footer id="colophon">
+<footer id="colophon" class="bg-pink p-4">
 
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+	<!-- <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<aside role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'magelang' ); ?>">
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</aside>
-	<?php endif; ?>
+	<?php endif; ?> -->
 
 	<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
 		<nav aria-label="<?php esc_attr_e( 'Footer Menu', 'magelang' ); ?>">
@@ -31,7 +31,7 @@
 		</nav>
 	<?php endif; ?>
 
-	<div>
+	<div class="text-center">
 		<?php
 		$magelang_blog_info = get_bloginfo( 'name' );
 		if ( ! empty( $magelang_blog_info ) ) :

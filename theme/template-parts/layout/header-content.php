@@ -9,31 +9,29 @@
 
 ?>
 
-<header id="masthead" class="py-4 px-2 bg-grey-lighter shadow-md mb-2 flex flex-col md:flex-row text-center md:text-left justify-between items-center border-t-4 border-primary">
+<header id="masthead" class="bg-magenta text-white flex justify-between items-end p-4">
 
-	<div class="flex items-center">
-		<div class="ml-4">
+	<div class="text-lg text-bold">
+		<?php
+		if ( is_front_page() ) :
+			?>
+			<h1><?php bloginfo( 'name' ); ?></h1>
 			<?php
-			if ( is_front_page() ) :
-				?>
-				<h1 class="mb-2"><?php bloginfo( 'name' ); ?></h1>
-				<?php
-			else :
-				?>
-				<h1 class="mb-2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			endif;
+		else :
+			?>
+			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php
+		endif;
 
-			$magelang_description = get_bloginfo( 'description', 'display' );
-			if ( $magelang_description || is_customize_preview() ) :
-				?>
-				<p><?php echo $magelang_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div>
+		$magelang_description = get_bloginfo( 'description', 'display' );
+		if ( $magelang_description || is_customize_preview() ) :
+			?>
+			<p><?php echo $magelang_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+		<?php endif; ?>
 	</div>
 
 	<nav id="site-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'magelang' ); ?>">
-		<button aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'magelang' ); ?></button>
+		<button aria-controls="primary-menu" aria-expanded="false" class="hidden"><?php esc_html_e( 'Primary Menu', 'magelang' ); ?></button>
 
 		<?php
 		wp_nav_menu(

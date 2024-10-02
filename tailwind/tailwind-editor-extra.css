@@ -12,6 +12,6 @@
  */
 
 .entry-header,
-.entry-content {
+.entry-content{
 	@apply px-8;
 }

@@ -55,22 +55,49 @@
 	@apply float-right ml-8;
 }
 
-/**
- * Menu
- */
+.entry-meta{
+	@apply max-w-content mx-auto pb-4;
+}
 
+.wp-post-image{
+	@apply max-w-content mx-auto py-4;
+}
+
+.entry-footer {
+	@apply max-w-content mx-auto py-4;
+}
+
+/**
+* Menu
+*/
 #primary-menu {
 	@apply flex gap-4;
 }
 
 
 /**
- * Widget
- */
+* Widget
+*/
 .widget_block {
 	@apply mb-6;
 }
 
 .wp-block-heading {
 	@apply text-xl font-extrabold;
+}
+
+
+/**
+* Nav Links
+*/
+.nav-links {
+	@apply max-w-content mx-auto py-4 text-center;
+}
+
+
+/**
+* Comments
+*/
+#comments {
+	@apply max-w-content mx-auto py-4 text-left;
 }

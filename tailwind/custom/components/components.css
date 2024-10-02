@@ -55,6 +55,22 @@
 	@apply float-right ml-8;
 }
 
+/**
+ * Menu
+ */
+
 #primary-menu {
 	@apply flex gap-4;
+}
+
+
+/**
+ * Widget
+ */
+.widget_block {
+	@apply mb-6;
+}
+
+.wp-block-heading {
+	@apply text-xl font-extrabold;
 }

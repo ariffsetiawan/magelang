@@ -94,7 +94,11 @@
 }
 
 .wp-block-heading {
-	@apply text-xl font-extrabold;
+	@apply text-xl font-extrabold mb-2;
+}
+
+.wp-block-search label {
+	@apply hidden;
 }
 
 
@@ -102,7 +106,7 @@
 * Nav Links
 */
 .nav-links {
-	@apply max-w-content mx-auto flex justify-between py-4 text-center;
+	@apply max-w-content mx-auto flex py-4 text-center;
 }
 
 .nav-previous {

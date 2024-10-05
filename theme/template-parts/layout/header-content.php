@@ -9,7 +9,7 @@
 
 ?>
 
-<header id="masthead" class="bg-black text-white flex justify-between items-end p-4">
+<header id="masthead" class="bg-black text-white flex justify-between items-end p-8 border-t-magenta border-t-4">
 
 	<div class="text-lg text-bold">
 		<?php

@@ -48,11 +48,7 @@ get_header();
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-		<aside id="secondary" class="lg:w-1/3 m-4 my-12" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'magelang' ); ?>">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-		</aside>
-	<?php endif; ?>
+	<?php get_sidebar(); ?>
 
 </div>
 

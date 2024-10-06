@@ -9,24 +9,15 @@
 
 ?>
 
-<header id="masthead" class="bg-black text-white flex justify-between items-end p-8 border-t-magenta border-t-4">
+<header id="masthead" class="bg-black text-white flex justify-between items-center p-8 border-t-magenta border-t-4 shadow">
 
-	<div class="text-lg text-bold">
+	<div class="text-lg">
+		<h1 class="text-3xl font-extrabold"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php
-		if ( is_front_page() ) :
-			?>
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<?php
-		else :
-			?>
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php
-		endif;
-
 		$magelang_description = get_bloginfo( 'description', 'display' );
 		if ( $magelang_description || is_customize_preview() ) :
 			?>
-			<p><?php echo $magelang_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<p class="text-sm"><?php echo $magelang_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 		<?php endif; ?>
 	</div>
 

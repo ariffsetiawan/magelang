@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area lg:w-1/3 m-4 my-12" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'magelang' ); ?>">
+<aside id="secondary" class="widget-area lg:w-1/3 m-4 my-10" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'magelang' ); ?>">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

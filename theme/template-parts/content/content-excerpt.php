@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('my-6'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('my-4'); ?>>
 
 	<header class="entry-header">
 		<?php
@@ -20,9 +20,8 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php magelang_post_thumbnail(); ?>
-
-	<div <?php magelang_content_class( 'entry-content' ); ?>>
+	<div <?php magelang_content_class( 'entry-content flex flex-col lg:flex-row' ); ?>>
+		<?php the_post_thumbnail( 'medium', ['class' => 'w-auto max-h-fit lg:mr-4 ml-0 lg:my-6 my-2']  ); ?>
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 

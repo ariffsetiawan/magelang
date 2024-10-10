@@ -63,16 +63,32 @@
 /**
 * Widget
 */
-.widget_block {
-	@apply mb-6;
-}
+.widget-area {
 
-.wp-block-heading {
-	@apply text-xl font-extrabold mb-2;
-}
+	.widget {
+		@apply mb-6;
+	}
 
-.wp-block-search label {
-	@apply hidden;
+	.wp-block-heading {
+		@apply text-xl font-extrabold mb-2;
+	}
+	
+	.wp-block-search {
+		label {
+			@apply hidden;
+		}
+
+		button[type="submit"] {
+			@apply bg-magenta cursor-pointer;
+		}
+	}
+
+	ul {
+		li {
+			@apply py-1 ml-1;
+		}
+	}
+	
 }
 
 

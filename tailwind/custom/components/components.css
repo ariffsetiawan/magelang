@@ -45,6 +45,12 @@
 	@apply ml-4;
 }
 
+.entry-content {
+	p {
+		@apply leading-relaxed;
+	}
+}
+
 .entry-footer {
 	@apply max-w-content mx-auto py-4 flex gap-2 justify-between;
 }

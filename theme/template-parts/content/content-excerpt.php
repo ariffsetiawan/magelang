@@ -21,7 +21,9 @@
 	</header><!-- .entry-header -->
 
 	<div <?php magelang_content_class( 'entry-content flex flex-col lg:flex-row' ); ?>>
-		<?php the_post_thumbnail( 'medium', ['class' => 'w-auto max-h-fit lg:mr-4 ml-0 lg:my-6 my-2']  ); ?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail( 'medium', ['class' => 'w-auto max-h-fit lg:mr-4 ml-0 lg:my-6 my-2']  ); ?>
+		<?php endif; ?>
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 

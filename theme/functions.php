@@ -211,3 +211,19 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+
+/**
+ * Dots after excerpt
+ */
+
+ function magelang_new_excerpt_more($more)
+ {
+	 if(is_admin()) {
+		 return $more;
+	 }
+	 return ' ...';
+ }
+ add_filter('excerpt_more', 'magelang_new_excerpt_more');
+
+

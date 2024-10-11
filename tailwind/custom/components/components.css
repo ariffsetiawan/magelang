@@ -117,37 +117,72 @@
 * Comments
 */
 #comments {
-	@apply max-w-content mx-auto py-4 text-left border-t-2 border-gray-300;
-}
+	@apply max-w-content mx-auto py-4 mb-24 text-left border-t-2 border-gray-300;
 
-.comment-reply-title {
-	@apply text-lg font-semibold;
-}
-
-.comment-form {
-
-	@apply max-w-lg;
-
-	.comment-notes {
-		@apply my-2;
+	ol {
+		@apply pl-8 py-2;
 	}
 
-	textarea, input {
-		@apply border-2 border-gray-300 p-2 my-2 !important;
-		outline: none;
-		transition: all 200ms ease;
+	article.comment-body {
+		@apply bg-gray-50 p-4 rounded shadow-md mb-2;
 
-		&:focus {
-			@apply border-magenta;
+		.comment-content {
+			@apply my-4;
+		}
+
+		.comment-author {
+			@apply flex items-center;
+
+			img.avatar {
+				@apply rounded-full mr-2;
+			}
+
+			span.says {
+				@apply hidden;
+			}
+		}
+
+		.comment-metadata {
+			@apply flex justify-between;
 		}
 	}
+}
 
-	p:not(:first-child) {
-		@apply flex flex-col;
+.comment-respond {
+	@apply mt-4;
+
+	.comment-reply-title {
+		@apply text-lg font-semibold mb-4;
 	}
 
-	input[type="submit"] {
-		@apply bg-magenta cursor-pointer text-white;
+	.logged-in-as {
+		@apply mb-4;
 	}
 
+	.comment-form {
+		@apply max-w-lg;
+	
+		.comment-notes {
+			@apply my-2;
+		}
+	
+		textarea, input {
+			@apply border-2 border-gray-300 p-2 my-2 !important;
+			outline: none;
+			transition: all 200ms ease;
+	
+			&:focus {
+				@apply border-magenta;
+			}
+		}
+	
+		p:not(:first-child) {
+			@apply flex flex-col;
+		}
+	
+		input[type="submit"] {
+			@apply bg-magenta cursor-pointer text-white;
+		}
+	
+	}
 }

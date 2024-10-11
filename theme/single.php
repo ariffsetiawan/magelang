@@ -12,7 +12,7 @@ get_header();
 if ( is_active_sidebar( 'sidebar-1' ) ): ?>
 <div id="content-wrap" class="flex flex-col md:flex-row mx-auto max-w-5xl">	
 	
-	<section id="primary" class="lg:w-2/3 m-4">
+	<section id="primary" class="lg:w-2/3 md:w-1/2 m-4">
 <?php else: ?>
 <div id="content-wrap" class="mx-auto max-w-5xl">
 	

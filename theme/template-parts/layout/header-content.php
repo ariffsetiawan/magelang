@@ -11,15 +11,18 @@
 
 <header id="masthead" class="bg-black text-white flex flex-col md:flex-row justify-between items-center p-8 border-t-magenta border-t-4 shadow text-center md:text-left">
 
-	<div class="text-lg">
-		<h1 class="text-3xl font-extrabold mb-1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php
-		$magelang_description = get_bloginfo( 'description', 'display' );
-		if ( $magelang_description || is_customize_preview() ) :
-		?>
-		<p class="text-sm"><?php echo $magelang_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-		<?php endif; ?>
-	</div>
+	<div class="site-branding flex items-center">
+		<?php the_custom_logo();?>
+		<div class="flex flex-col">
+			<h1 class="site-title text-3xl font-extrabold mb-1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php
+			$magelang_description = get_bloginfo( 'description', 'display' );
+			if ( $magelang_description || is_customize_preview() ) :
+			?>
+			<p class="site description text-sm"><?php echo $magelang_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php endif; ?>
+		</div>
+	</div><!-- .site-branding -->
 
 	<nav id="site-navigation" class="mt-4 md:mt-0" aria-label="<?php esc_attr_e( 'Main Navigation', 'magelang' ); ?>">
 		<button class="sm:hidden mb-4" aria-controls="primary-menu" aria-expanded="false">

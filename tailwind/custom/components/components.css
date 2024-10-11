@@ -8,6 +8,10 @@
  * — from https://tailwindcss.com/docs/plugins#adding-components
  */
 
+ .custom-logo {
+	@apply max-w-12 mr-2 rounded-md;
+ }
+
 /**
  * Post title styles
  *

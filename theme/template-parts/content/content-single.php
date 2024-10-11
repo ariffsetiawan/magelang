@@ -21,9 +21,11 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php the_post_thumbnail( 'large', ['class' => 'w-auto max-h-fit lg:mr-4 ml-0 lg:my-6 my-2']  ); ?>
-
 	<div <?php magelang_content_class( 'entry-content' ); ?>>
+		<div class="container mx-auto h-400 w-600">
+			<?php the_post_thumbnail( 'large', ['class' => 'w-auto max-w-fit max-h-fit lg:mr-4 ml-0 lg:my-6 my-2 object-cover h-full w-full object-cover']  ); ?>
+		</div>
+	
 		<?php
 		the_content(
 			sprintf(

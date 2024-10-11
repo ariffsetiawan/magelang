@@ -36,5 +36,5 @@ h5 {
 }
 
 h6 {
-	@apply text-base font-thin;
+	@apply text-base font-light;
 }

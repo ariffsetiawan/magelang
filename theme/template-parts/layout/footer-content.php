@@ -11,14 +11,19 @@
 
 <footer id="colophon">
 
-	<div class="p-4 border-t-2 border-b-2">
-		<!-- <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-			<aside role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'magelang' ); ?>">
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
-			</aside>
-		<?php endif; ?> -->
-
-		<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
+	<?php if (is_active_sidebar('footerwidget-1')) : ?>
+	<div class="border-t-2">
+		<div id="content-wrap" class="flex flex-row mx-auto max-w-5xl p-4 mt-4">	
+			<div class="site-footer-widget-area widget-area">
+				<?php dynamic_sidebar('footerwidget-1'); ?>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+	
+	<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
+	<div class="border-t-2">
+		<div id="content-wrap" class="flex flex-row mx-auto max-w-5xl p-4 justify-center">
 			<nav aria-label="<?php esc_attr_e( 'Footer Menu', 'magelang' ); ?>">
 				<?php
 				wp_nav_menu(
@@ -30,11 +35,11 @@
 				);
 				?>
 			</nav>
-		<?php endif; ?>
-
+		</div>
 	</div>
+	<?php endif; ?>
 
-	<div class="p-4 text-center">
+	<div class="border-t-2 p-4 text-center">
 		<?php
 
 		esc_html_e( '&copy; Copyright ', 'magelang' );

@@ -144,9 +144,21 @@ add_action( 'after_setup_theme', 'magelang_setup' );
 function magelang_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'magelang' ),
+			'name'          => esc_html__( 'Sidebar', 'magelang' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'magelang' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'magelang' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer Widget', 'magelang'),
+			'id'            => 'footerwidget-1',
+			'description'   => esc_html__('Add widgets here to appear in your footer.', 'magelang'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

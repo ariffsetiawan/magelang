@@ -196,3 +196,13 @@
 	
 	}
 }
+
+/**
+* Footer
+*/
+
+footer {
+	.wp-block-latest-posts li a{
+		@apply font-semibold;
+	}
+}

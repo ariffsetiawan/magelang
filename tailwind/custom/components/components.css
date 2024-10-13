@@ -12,6 +12,18 @@
 	@apply max-w-12 mr-2 rounded-md;
  }
 
+ #content {
+	a {
+		&:hover {
+			@apply text-magenta underline;
+		}
+	}
+ }
+
+ #main {
+	@apply mr-4;
+ }
+
 /**
  * Post title styles
  *
@@ -203,6 +215,10 @@ aside.widget-area {
 		li {
 			@apply py-1;
 		}
+	}
+
+	time {
+		@apply text-gray-500;
 	}
 	
 }

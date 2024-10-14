@@ -229,4 +229,8 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+// Include the custom Tailwind navigation walker
+require_once get_template_directory() . '/inc/tailwind-nav-walker.php';
+
+
 

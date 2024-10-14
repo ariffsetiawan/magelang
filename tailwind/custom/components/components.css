@@ -78,8 +78,24 @@
 	@apply flex justify-center;
 }
 
+.menu-item-has-children.hovered > a {
+    @apply text-white /* Example to change link color when submenu is activated */
+}
+
 .footer-menu {
 	@apply flex gap-4 text-center;
+}
+
+#mobile-menu {
+	ul li {
+		@apply my-2 pl-4 text-gray-300 font-semibold text-xl;
+
+		a {
+			&:hover {
+				@apply underline text-white;
+			}
+		}
+	}
 }
 
 /**

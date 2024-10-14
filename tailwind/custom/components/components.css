@@ -160,6 +160,10 @@
 			@apply flex justify-between;
 		}
 	}
+
+	.bypostauthor {
+		@apply border-l-4 border-gray-300;
+	}
 }
 
 .comment-respond {

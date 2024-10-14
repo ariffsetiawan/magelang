@@ -132,6 +132,11 @@ if ( ! function_exists( 'magelang_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Add other theme support
+		add_theme_support( 'wp-block-styles' );
+		add_theme_support( 'align-wide' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'magelang_setup' );

@@ -38,3 +38,15 @@ h5 {
 h6 {
 	@apply text-base font-light;
 } 
+
+.alignright {
+	@apply text-right;
+}
+
+.alignleft {
+	@apply text-left;
+}
+
+.aligncenter {
+	@apply text-center;
+}

@@ -30,12 +30,12 @@ if ( is_active_sidebar( 'sidebar-1' ) ): ?>
 					// Previous/next post navigation.
 					the_post_navigation(
 						array(
-							'next_text' => '<span aria-hidden="true">' . __( 'Next Post', 'magelang' ) . '</span> ' .
+							'next_text' => '<span class="nav-next-text" aria-hidden="true">' . __( 'Next Post', 'magelang' ) . '</span> ' .
 								'<span class="sr-only">' . __( 'Next post:', 'magelang' ) . '</span> <br/>' .
-								'<span>%title</span>',
-							'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', 'magelang' ) . '</span> ' .
+								'<span class="nav-next-title">%title</span>',
+							'prev_text' => '<span class="nav-previous-text" aria-hidden="true">' . __( 'Previous Post', 'magelang' ) . '</span> ' .
 								'<span class="sr-only">' . __( 'Previous post:', 'magelang' ) . '</span> <br/>' .
-								'<span>%title</span>',
+								'<span class="nav-previous-title">%title</span>',
 						)
 					);
 				}

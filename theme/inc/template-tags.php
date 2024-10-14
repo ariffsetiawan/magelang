@@ -141,11 +141,13 @@ if ( ! function_exists( 'magelang_entry_footer' ) ) :
 		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 
-			// Posted by.
-			magelang_posted_by();
+			if ( ! is_singular() ) {
+				// Posted by.
+				magelang_posted_by();
 
-			// Posted on.
-			magelang_posted_on();
+				// Posted on.
+				magelang_posted_on();
+			}
 
 			/* translators: used between list items, there is a space after the comma. */
 			$categories_list = get_the_category_list( __( ', ', 'magelang' ) );

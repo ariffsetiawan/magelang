@@ -11,7 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('my-4'); ?>>
 
-	<header class="entry-header">
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="w-full h-48 md:h-64 lg:h-64 mt-6">
+			<?php the_post_thumbnail( 'large', ['class' => 'w-full h-full object-cover']  ); ?>
+		</div>
+	<?php endif; ?>
+
+	<header class="entry-header mt-7">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<?php if ( ! is_page() ) : ?>
@@ -22,11 +28,6 @@
 	</header><!-- .entry-header -->
 
 	<div <?php magelang_content_class( 'entry-content' ); ?>>
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="w-full h-48 md:h-64 lg:h-96">
-				<?php the_post_thumbnail( 'large', ['class' => 'w-full h-full object-cover']  ); ?>
-			</div>
-		<?php endif; ?>
 		<?php
 		the_content(
 			sprintf(

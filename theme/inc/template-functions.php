@@ -98,6 +98,8 @@ function magelang_continue_reading_link( $more_string ) {
 		);
 
 		$more_string = '<a href="' . esc_url( get_permalink() ) . '">' . $continue_reading . '</a>';
+
+		$more_string = ' ...';
 	}
 
 	return $more_string;

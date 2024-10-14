@@ -17,12 +17,20 @@ if ( ! function_exists( 'magelang_posted_on' ) ) :
 			$time_string = '<time datetime="%1$s">%2$s</time><time datetime="%3$s">%4$s</time>';
 		}
 
+		// $time_string = sprintf(
+		// 	$time_string,
+		// 	esc_attr( get_the_date( DATE_W3C ) ),
+		// 	esc_html( get_the_date() ),
+		// 	esc_attr( get_the_modified_date( DATE_W3C ) ),
+		// 	esc_html( get_the_modified_date() )
+		// );
+
 		$time_string = sprintf(
 			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
+			'',
+			'',
 		);
 
 		printf(
@@ -73,30 +81,32 @@ if ( ! function_exists( 'magelang_entry_meta' ) ) :
 			// Posted by.
 			magelang_posted_by();
 
+			printf(' > ');
+
 			// Posted on.
 			magelang_posted_on();
 
 			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'magelang' ) );
-			if ( $categories_list ) {
-				printf(
-				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
-					'<span class="sr-only">%1$s</span>%2$s',
-					esc_html__( 'Posted in', 'magelang' ),
-					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				);
-			}
+			// $categories_list = get_the_category_list( __( ', ', 'magelang' ) );
+			// if ( $categories_list ) {
+			// 	printf(
+			// 	/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+			// 		'<span class="sr-only">%1$s</span>%2$s',
+			// 		esc_html__( 'Posted in', 'magelang' ),
+			// 		$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// 	);
+			// }
 
 			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'magelang' ) );
-			if ( $tags_list ) {
-				printf(
-				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
-					'<span class="sr-only">%1$s</span>%2$s',
-					esc_html__( 'Tags:', 'magelang' ),
-					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				);
-			}
+			// $tags_list = get_the_tag_list( '', __( ', ', 'magelang' ) );
+			// if ( $tags_list ) {
+			// 	printf(
+			// 	/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
+			// 		'<span class="sr-only">%1$s</span>%2$s',
+			// 		esc_html__( 'Tags:', 'magelang' ),
+			// 		$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// 	);
+			// }
 		}
 
 		// Comment count.

@@ -216,6 +216,13 @@ aside.widget-area {
 	}
 }
 
+.wp-block-categories-list {
+	ul li {
+		@apply pl-4 text-gray-500;
+	}
+
+}
+
 /**
 * Widget
 */

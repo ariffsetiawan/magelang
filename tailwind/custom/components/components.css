@@ -35,7 +35,7 @@
  */
 .page-title,
 .entry-title {
-	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900 break-words;
 }
 
 .page-title-separator {
@@ -71,6 +71,26 @@
 	p {
 		@apply leading-relaxed;
 	}
+}
+
+.wp-caption {
+	@apply max-w-full;
+}
+
+.wp-caption-text {
+	@apply text-sm;
+}
+
+.gallery-item {
+	@apply mb-6;
+
+	img {
+		@apply w-full h-auto rounded;
+	}
+}
+
+.gallery-caption {
+	@apply text-sm;
 }
 
 .entry-footer {
@@ -123,26 +143,26 @@
 	}
 
 	.nav-previous {
-		@apply text-left after:block after:mt-2 after:w-12 after:h-1 after:bg-gray-300 !important;
+		@apply text-left break-words max-w-64 after:block after:mt-2 after:w-12 after:h-1 after:bg-gray-300 !important;
 		
 		.nav-previous-text {
 			@apply font-semibold text-black;
 		}
 
 		.nav-previous-title {
-			@apply text-gray-500;
+			@apply text-gray-500 break-words;
 		}
 	}
 	
 	.nav-next {
-		@apply text-right;
+		@apply text-right break-words max-w-64;
 
 		.nav-next-text {
 			@apply font-semibold text-black;
 		}
 
 		.nav-next-title {
-			@apply text-gray-500;
+			@apply text-gray-500 break-words;
 		}
 	}
 	
@@ -312,4 +332,3 @@ footer {
 		@apply font-semibold;
 	}
 }
-

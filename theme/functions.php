@@ -232,5 +232,18 @@ require get_template_directory() . '/inc/template-functions.php';
 // Include the custom Tailwind navigation walker
 require_once get_template_directory() . '/inc/tailwind-nav-walker.php';
 
+// Image caption
+function magelang_img_caption_shortcode_filter($output, $attr, $content) {
+    if (isset($attr['caption'])) {
+        $output = '<figure class="wp-caption">';
+        $output .= do_shortcode($content);
+        $output .= '<figcaption class="wp-caption-text">' . $attr['caption'] . '</figcaption>';
+        $output .= '</figure>';
+    }
+    return $output;
+}
+add_filter('img_caption_shortcode', 'magelang_img_caption_shortcode_filter', 10, 3);
+
+
 
 

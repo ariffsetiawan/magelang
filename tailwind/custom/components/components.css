@@ -38,6 +38,10 @@
 	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
 }
 
+.page-title-separator {
+	@apply block my-4 w-12 h-1 bg-gray-300 mx-auto !important;
+}
+
 /**
  * Layout styles for centered content areas
  *

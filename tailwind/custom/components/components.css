@@ -42,6 +42,12 @@
 	@apply block my-4 w-12 h-1 bg-gray-300 mx-auto !important;
 }
 
+.sticky {
+	.entry-title {
+		@apply after:block after:mt-2 after:w-12 after:h-1 after:bg-gray-300 !important;
+	}
+}
+
 /**
  * Layout styles for centered content areas
  *
@@ -68,7 +74,7 @@
 }
 
 .entry-footer {
-	@apply max-w-content mx-auto py-4 flex gap-2 justify-between;
+	@apply max-w-content mx-auto py-4 flex gap-2;
 }
 
 /**
@@ -283,6 +289,20 @@ aside.widget-area {
 	
 }
 
+/**
+* Search Form
+*/
+.search-form {
+
+	.search-field {
+		@apply w-96 mt-4 mb-24;
+	}
+
+	input[type="submit"] {
+		@apply p-2 bg-magenta cursor-pointer text-white;
+	}
+}
+
 
 /**
 * Footer
@@ -292,3 +312,4 @@ footer {
 		@apply font-semibold;
 	}
 }
+

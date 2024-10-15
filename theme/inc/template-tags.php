@@ -149,49 +149,64 @@ if ( ! function_exists( 'magelang_entry_footer' ) ) :
 				magelang_posted_on();
 			}
 
-			/* translators: used between list items, there is a space after the comma. */
-			$categories_list = get_the_category_list( __( ', ', 'magelang' ) );
-			if ( is_single() && $categories_list ) {
-				printf(
-				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
-					'<span class="sr-only">%1$s</span>%2$s',
-					esc_html__( 'Posted in', 'magelang' ),
-					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				);
-			}
+			// only show categories and tags in single post
+			if ( is_single() ) :
 
-			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'magelang' ) );
-			if ( is_single() && $tags_list ) {
-				printf(
-				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
-					'<span class="sr-only">%1$s</span>%2$s',
-					esc_html__( 'Tags:', 'magelang' ),
-					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				);
-			}
+				?>
+				<div class="flex flex-col gap-1 mt-4">
+				<?php
+
+				/* translators: used between list items, there is a space after the comma. */
+				$categories_list = get_the_category_list( __( ', ', 'magelang' ) );
+
+				if ( $categories_list ) {
+					?>
+					<div class="categories-list flex flex-row gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+						</svg>
+						<?php
+						printf(
+						/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
+							'<span class="sr-only">%1$s</span>%2$s',
+							esc_html__( 'Posted in', 'magelang' ),
+							$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						);
+						?>
+					</div>
+					<?php
+				}
+
+				/* translators: used between list items, there is a space after the comma. */
+				$tags_list = get_the_tag_list( '', __( ', ', 'magelang' ) );
+				if ( $tags_list ) {
+					?>
+					<div class="categories-list flex flex-row gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+						</svg>
+						<?php
+						printf(
+						/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
+							'<span class="sr-only">%1$s</span>%2$s',
+							esc_html__( 'Tags:', 'magelang' ),
+							$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						);
+						?>
+					</div>
+					<?php
+				}
+				?>
+				</div>
+				<?php
+			endif;	
 		}
 
 		// Comment count.
 		if ( ! is_singular() ) {
 			magelang_comment_count();
 		}
-
-		// Edit post link.
-		edit_post_link(
-			sprintf(
-				wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers. */
-					__( 'Edit <span class="sr-only">%s</span>', 'magelang' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
 	}
 endif;
 

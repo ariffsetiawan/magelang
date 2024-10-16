@@ -38,7 +38,7 @@ if ( ! defined( 'MAGELANG_TYPOGRAPHY_CLASSES' ) ) {
 	 */
 	define(
 		'MAGELANG_TYPOGRAPHY_CLASSES',
-		'prose prose-neutral max-w-none prose-a:text-magenta prose-headings:text-magenta'
+		'prose prose-neutral max-w-none prose-a:text-primary prose-headings:text-primary'
 	);
 }
 

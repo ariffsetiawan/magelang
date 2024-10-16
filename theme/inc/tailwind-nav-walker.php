@@ -2,7 +2,7 @@
 class Tailwind_Nav_Walker extends Walker_Nav_Menu {
     // Start Level - Adds dropdown classes
     function start_lvl(&$output, $depth = 0, $args = null) {
-        $output .= '<ul class="absolute hidden group-hover:block bg-gray-800 text-white py-4 px-4 shadow-lg z-10">';
+        $output .= '<ul class="absolute hidden group-hover:block bg-black text-white py-2 px-2 w-64 shadow-lg z-10">';
     }
 
     // Start Element - Adds Tailwind styling to menu items
@@ -23,7 +23,7 @@ class Tailwind_Nav_Walker extends Walker_Nav_Menu {
         $attributes .= !empty($item->url)        ? ' href="'   . esc_attr($item->url) . '"' : '';
 
         $item_output = $args->before;
-        $item_output .= '<a' . $attributes . ' class="flex items-center py-2 px-4 hover:bg-gray-600">';
+        $item_output .= '<a' . $attributes . ' class="flex items-center py-0 px-2">';
         $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
         $item_output .= '</a>';
         $item_output .= $args->after;

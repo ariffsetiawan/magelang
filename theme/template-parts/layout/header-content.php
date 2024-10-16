@@ -9,7 +9,7 @@
 
 ?>
 
-<header id="masthead" class="bg-black border-t-magenta border-t-4 shadow">
+<header id="masthead" class="bg-black border-t-primary border-t-4 shadow">
 
 	<div id="content-wrap" class="flex flex-col md:flex-row justify-between items-center mx-auto max-w-5xl p-4 text-center md:text-left text-white">
 		<div class="site-branding flex items-center">

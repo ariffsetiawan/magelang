@@ -16,9 +16,10 @@ module.exports = {
 		// Extend the default Tailwind theme.
 		extend: {
 			colors:{
-				black: '#000',
-				magenta: '#ca4050',
-				pink: '#e1a196',
+				primary: '#b31c45',
+				secondary: '#ffc16c',
+				tertiary: '#fcf5e5',
+				quarternary: '#9dc6ca',
 			},
 		},
 	},

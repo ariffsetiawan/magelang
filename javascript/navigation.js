@@ -59,14 +59,14 @@
 		subMenu.classList.add( 'hidden' );
 
 		const parentMenuItem = subMenu.parentNode;
-		const toggleButton = document.createElement( 'button' );
-		toggleButton.setAttribute( 'aria-expanded', 'false' );
-		toggleButton.classList.add( 'submenu-toggle', 'ml-2', 'text-white', 'focus:outline-none' );
+		// const toggleButton = document.createElement( 'button' );
+		// toggleButton.setAttribute( 'aria-expanded', 'false' );
+		// toggleButton.classList.add( 'submenu-toggle', 'ml-2', 'text-white', 'focus:outline-none' );
 
 		// Icon or label for submenu toggle
 		// toggleButton.innerHTML = '<span class="icon">+</span>';
 
-		parentMenuItem.insertBefore( toggleButton, subMenu );
+		// parentMenuItem.insertBefore( toggleButton, subMenu );
 
 		// Toggle the sub-menu on click or touch
 		toggleButton.addEventListener( 'click', function( event ) {
@@ -77,7 +77,7 @@
 			subMenu.classList.toggle( 'hidden' );
 
 			// Change the toggle icon (+ or -)
-			toggleButton.querySelector( '.icon' ).textContent = isExpanded ? '+' : '-';
+			// toggleButton.querySelector( '.icon' ).textContent = isExpanded ? '+' : '-';
 		} );
 
 		// Handle touch event for parent menu items (open dropdown on first touch)

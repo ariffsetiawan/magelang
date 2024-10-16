@@ -11,7 +11,7 @@
 
 <header id="masthead" class="bg-black border-t-primary border-t-4 shadow">
 
-	<div id="content-wrap" class="flex flex-col md:flex-row justify-between items-center mx-auto max-w-5xl p-4 text-center md:text-left text-white">
+	<div id="content-wrap" class="flex flex-col md:flex-row justify-between items-center mx-auto max-w-5xl py-6 px-4 text-center md:text-left text-white">
 		<div class="site-branding flex items-center">
 			<?php the_custom_logo();?>
 			<div class="flex flex-col">
@@ -25,13 +25,13 @@
 			</div>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="mt-4 md:mt-0" aria-label="<?php esc_attr_e( 'Main Navigation', 'magelang' ); ?>">
+		<nav id="site-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'magelang' ); ?>">
 			<!-- Menu -->
 			<?php
 				wp_nav_menu([
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
-				'menu_class'     => 'hidden lg:flex space-x-4',
+				'menu_class'     => 'primary-menu hidden lg:flex space-x-2',
 				'container'      => false,
 				'walker'         => new Tailwind_Nav_Walker(),
 				]);
@@ -47,9 +47,9 @@
 			</div>
 
 			<!-- Mobile Menu -->
-			<div id="mobile-menu" class="hidden lg:hidden fixed inset-y-0 left-0 w-96 bg-gray-900 text-white text-left transform -translate-x-full transition-transform duration-300 h-screen p-6 z-30">
+			<div id="mobile-menu" class="hidden lg:hidden fixed inset-y-0 left-0 w-96 bg-gray-900 text-white text-left transform -translate-x-full transition-transform duration-300 h-screen p-6 z-50">
 				<div class="p-4">
-					<button id="menu-close" class="text-white focus:outline-none float-right mt-4">
+					<button id="menu-close" class="text-white focus:outline-none float-right mt-6">
 						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 						</svg>

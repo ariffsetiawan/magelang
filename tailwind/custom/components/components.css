@@ -100,16 +100,28 @@
 /**
 * Menu
 */
-.menu {
-	@apply flex gap-4;
+
+#site-navigation {
+	@apply mt-4 items-center !important;
 }
 
-.menu-main-menu-container {
-	@apply flex justify-center;
-}
+.primary-menu {
+	.menu-item {
+		@apply text-white hover:text-secondary;
+	
+		ul {
+			li:not(:first-child) {
+				@apply border-t-2 border-gray-500;
+		
+				ul {
+					li:not(:first-child) {
+						@apply border-t-2 border-gray-500;
+					}
+				}
+			}
+		}
+	}
 
-.menu-item-has-children.hovered > a {
-    @apply text-white /* Example to change link color when submenu is activated */
 }
 
 .footer-menu {

@@ -9,13 +9,14 @@
 
 get_header();
 ?>
+<div id="content-wrap" class="mx-auto max-w-2xl">
 
-	<section id="primary">
+	<section id="primary" class="w-full md:w-auto m-4">
 		<main id="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header my-4">
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 			</header><!-- .page-header -->
 
@@ -40,6 +41,8 @@ get_header();
 		?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
+
+</div>
 
 <?php
 get_footer();

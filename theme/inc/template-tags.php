@@ -153,7 +153,9 @@ if ( ! function_exists( 'magelang_entry_footer' ) ) :
 			if ( is_single() ) :
 
 				?>
-				<div class="flex flex-col gap-1 mt-4">
+				<div class="flex flex-col gap-1 mt-4 w-full">
+
+				<div class="entry-content-separator"></div>
 				<?php
 
 				/* translators: used between list items, there is a space after the comma. */

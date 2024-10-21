@@ -245,5 +245,27 @@ function magelang_img_caption_shortcode_filter($output, $attr, $content) {
 add_filter('img_caption_shortcode', 'magelang_img_caption_shortcode_filter', 10, 3);
 
 
+/**
+ * Get posts from loop.
+ *
+ * @param int $amount
+ * @param mixed $callback
+ * @return void
+ */
+function magelang_posts_from_loop( $amount, $callback ) {
+	global $wp_query;
+
+	$count = 0;
+
+	while ( ( $count < $amount ) && ( $wp_query->current_post + 1 < $wp_query->post_count ) ) {
+		$wp_query->the_post();
+
+		$callback();
+
+		$count++;
+	}
+}
+
+
 
 

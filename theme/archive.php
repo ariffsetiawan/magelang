@@ -18,6 +18,15 @@ get_header();
 
 			<header class="page-header my-4">
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+				<?php
+					// If this isn't search result, show an optional term description.
+					if( ! is_search() ) :
+						$term_description = term_description();
+						if ( ! empty( $term_description ) ) :
+							printf( '<div class="page-description">%s</div>', $term_description );
+						endif;
+					endif;
+				?>
 			</header><!-- .page-header -->
 
 			<?php

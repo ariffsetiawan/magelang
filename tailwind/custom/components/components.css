@@ -8,21 +8,21 @@
  * — from https://tailwindcss.com/docs/plugins#adding-components
  */
 
- .custom-logo {
+.custom-logo {
 	@apply max-w-12 mr-2 rounded-md;
- }
+}
 
- #content {
+#content {
 	a {
 		&:hover {
 			@apply text-primary underline;
 		}
 	}
- }
+}
 
- #main {
+#main {
 	@apply mr-4;
- }
+}
 
 /**
  * Post title styles
@@ -40,6 +40,10 @@
 
 .page-title-separator {
 	@apply block my-4 w-12 h-1 bg-gray-300 mx-auto !important;
+}
+
+.page-description {
+	@apply mb-8;
 }
 
 .sticky {
@@ -74,7 +78,7 @@
 }
 
 .entry-content-separator {
-	@apply block my-4 w-12 h-1 bg-gray-300 mx-auto clear-both !important
+	@apply block my-4 w-12 h-1 bg-gray-300 mx-auto clear-both !important;
 }
 
 .wp-caption {
@@ -112,11 +116,11 @@
 .primary-menu {
 	.menu-item {
 		@apply text-white hover:text-secondary;
-	
+
 		ul {
 			li:not(:first-child) {
 				@apply border-t-2 border-gray-500;
-		
+
 				ul {
 					li:not(:first-child) {
 						@apply border-t-2 border-gray-500;
@@ -125,7 +129,6 @@
 			}
 		}
 	}
-
 }
 
 .footer-menu {
@@ -162,7 +165,7 @@
 
 	.nav-previous {
 		@apply text-left break-words max-w-64;
-		
+
 		.nav-previous-text {
 			@apply font-semibold text-black;
 		}
@@ -171,7 +174,7 @@
 			@apply text-gray-500 break-words;
 		}
 	}
-	
+
 	.nav-next {
 		@apply text-right break-words max-w-64;
 
@@ -183,13 +186,11 @@
 			@apply text-gray-500 break-words;
 		}
 	}
-	
 }
 
 .navigation.pagination {
 	@apply text-center;
 }
-
 
 /**
 * Comments
@@ -243,29 +244,29 @@
 
 	.comment-form {
 		@apply max-w-lg;
-	
+
 		.comment-notes {
 			@apply my-2;
 		}
-	
-		textarea, input {
+
+		textarea,
+		input {
 			@apply border-2 border-gray-300 p-2 my-2 !important;
 			outline: none;
 			transition: all 200ms ease;
-	
+
 			&:focus {
 				@apply border-primary;
 			}
 		}
-	
+
 		p:not(:first-child) {
 			@apply flex flex-col;
 		}
-	
+
 		input[type="submit"] {
 			@apply bg-primary cursor-pointer text-white;
 		}
-	
 	}
 }
 
@@ -284,14 +285,12 @@ aside.widget-area {
 	ul li {
 		@apply pl-4 text-gray-500;
 	}
-
 }
 
 /**
 * Widget
 */
 .widget-area {
-
 	.widget {
 		@apply mb-6;
 	}
@@ -300,11 +299,13 @@ aside.widget-area {
 		@apply text-xl font-extrabold mb-3 after:block after:mt-2 after:w-12 after:h-1 after:bg-secondary !important;
 	}
 
-	textarea, input, select {
+	textarea,
+	input,
+	select {
 		@apply border-2 border-gray-300 p-2 !important;
 		outline: none;
 	}
-	
+
 	.wp-block-search {
 		label {
 			@apply hidden;
@@ -324,14 +325,12 @@ aside.widget-area {
 	time {
 		@apply text-gray-500;
 	}
-	
 }
 
 /**
 * Search Form
 */
 .search-form {
-
 	.search-field {
 		@apply w-96 mt-4 mb-24;
 	}
@@ -341,12 +340,11 @@ aside.widget-area {
 	}
 }
 
-
 /**
 * Footer
 */
 footer {
-	.wp-block-latest-posts li a{
+	.wp-block-latest-posts li a {
 		@apply font-semibold;
 	}
 }

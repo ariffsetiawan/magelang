@@ -37,9 +37,9 @@ add_filter( 'comment_form_defaults', 'magelang_comment_form_defaults' );
  */
 function magelang_get_the_archive_title() {
 	if ( is_category() ) {
-		$title = __( 'Category Archives: ', 'magelang' ) . '<span>' . single_term_title( '', false ) . '</span>';
+		$title = single_cat_title( '', false );
 	} elseif ( is_tag() ) {
-		$title = __( 'Tag Archives: ', 'magelang' ) . '<span>' . single_term_title( '', false ) . '</span>';
+		$title = single_tag_title( '', false );
 	} elseif ( is_author() ) {
 		$title = __( 'Author Archives: ', 'magelang' ) . '<span>' . get_the_author_meta( 'display_name' ) . '</span>';
 	} elseif ( is_year() ) {
